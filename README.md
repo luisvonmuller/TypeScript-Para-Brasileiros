@@ -1,4 +1,4 @@
-# 🇧🇷 🇧🇷 Guia de Estilos 🎨
+# 🇧🇷 Guia de Estilos 🎨
 
 🔥 Este é um **Guia não oficial** e você pode opinar através do repositório de GitHub para juntos chegarmos a melhor definição do Ideal! **Vamos colaborar? 💪**
 
@@ -6,7 +6,7 @@
 
 ### 👉 Navegação por tópico facilitada!
 
-* ⭐️ Variáveis
+* ⭐️ Variáveis & Funções
 * 📦 Classes
 * 🔌 Interfaces
 * 🌟 Tipos
@@ -21,6 +21,23 @@
 * 🤨 Tipo vs Interface
 * ⚠️ Comparadores, "==" vs "==="
 
-<mark style="background-color:purple;">\*\*\*\*</mark>
+### ⭐️​ Variáveis e Funções:
 
-###
+{% hint style="success" %}
+Use camelCase para nomear variáveis e funções
+{% endhint %}
+
+#### &#x20;Má nomenclatura 🚫
+
+```typescript
+let FulanoVariavel: string = "#ForaBolsonaro";
+function CiclanoFuncao(){}
+```
+
+#### Boa nomenclatura ✅​&#x20;
+
+```typescript
+let fulanoVariavel: string = "#ForaBolsonaro";
+function ciclanoFuncao(){}
+```
+
