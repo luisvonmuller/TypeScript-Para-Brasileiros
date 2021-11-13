@@ -326,3 +326,13 @@ Sobre outras coisas como usar "tabs" ou espaço. O sugerido para JS é 2 espaço
 {% endhint %}
 
 _(Mas eu uso tabs configuradas como 4 espaços)_ 🤗
+
+## ⚙️​ Ponto & Vírgula;
+
+{% hint style="success" %}
+Use ponto e vírgulas, por quê?&#x20;
+
+* Pontos e vírgulas explícitos ajudam os identadores (tsfmt/prettier) a identificar e "estruturar" seu código.&#x20;
+* A falta de ponto e vírgula pode ser incômodo para novos desenvolvedores em TS. Já que a maioria das linguagens o implementa. (Houve um debate sobre como isso pode ser "incomodo" para novos desenvolvedores e outros. [https://github.com/tc39/ecma262/pull/1062](https://github.com/tc39/ecma262/pull/1062))
+* Empresas grandes usam em suas implementações, ex: Google/Angular - Facebook/React - Microsoft/VScode...
+{% endhint %}
