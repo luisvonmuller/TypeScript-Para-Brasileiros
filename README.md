@@ -134,7 +134,7 @@ type Fulano = {
 ## 😳 Namespaces&#x20;
 
 {% hint style="success" %}
-Use _**PascalCase**_ para nomear o seu conjunto nomenclatural ⚙️
+Use**`PascalCase `**`para nomear os "Namespaces" - ⭐️ Padrão do time do TS.`
 {% endhint %}
 
 #### Má nomenclatura 🚫
@@ -148,6 +148,35 @@ namespace fulanoDeTal {
 
 ```typescript
 namespace FulanoDeTal {
+}
+```
+
+## 🔢 Enum&#x20;
+
+{% hint style="success" %}
+Use_**`PascalCase`**_`para nomear os Enums.`
+
+* Use _**`PascalCase`**_`para nomear seus subtipos/valores.`
+{% endhint %}
+
+#### Má nomenclatura 🚫
+
+```typescript
+enum jogodoBicho {
+   avestruz,
+   borboleta,
+   cachorro
+}
+
+```
+
+#### Boa nomenclatura ✅​&#x20;
+
+```typescript
+enum JogoDoBicho {
+   Avestruz,
+   Borboleta,
+   Cachorro
 }
 ```
 
