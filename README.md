@@ -11,7 +11,7 @@
 * 😳 Namespaces
 * 🔢 Enum
 * <mark style="background-color:purple;">📭 null</mark> vs  <mark style="background-color:purple;">😱 undefined</mark>
-* 📑 Formatação no geral
+* 📑 Formatação
 * 🤔 Aspas simples vs Aspas Duplas
 * 👯‍♀️ Anotação de Tipos para Array
 * ⚙️ Uso de ponto e vírgula ao final de linhas **" ; "**
@@ -28,14 +28,14 @@ Use _**camelCase**_ para nomear variáveis e funções
 #### &#x20;Má nomenclatura 🚫
 
 ```typescript
-let FulanoVariavel: string = "#ForaBolsonaro";
+let FulanoVariavel: string = '#ForaBolsonaro';
 function CiclanoFuncao(){}
 ```
 
 #### Boa nomenclatura ✅​&#x20;
 
 ```typescript
-let fulanoVariavel: string = "#ForaBolsonaro";
+let fulanoVariavel: string = '#ForaBolsonaro';
 function ciclanoFuncao(){}
 ```
 
@@ -95,7 +95,7 @@ Não use o Prefixo "I", exemplo: IfuncaoFulano... 😡&#x20;
 
 ```typescript
 interface IFulano { 
-   DeTal: string;
+    DeTal: string;
 } 
 ```
 
@@ -103,7 +103,7 @@ interface IFulano {
 
 ```typescript
 interface Fulano { 
-   deTal: string;
+    deTal: string;
 } 
 ```
 
@@ -163,9 +163,9 @@ Use_**`PascalCase`**_`para nomear os Enums.`
 
 ```typescript
 enum jogodoBicho {
-   avestruz,
-   borboleta,
-   cachorro
+    avestruz,
+    borboleta,
+    cachorro
 }
 
 ```
@@ -174,9 +174,9 @@ enum jogodoBicho {
 
 ```typescript
 enum JogoDoBicho {
-   Avestruz,
-   Borboleta,
-   Cachorro
+    Avestruz,
+    Borboleta,
+    Cachorro
 }
 ```
 
@@ -275,6 +275,55 @@ if (error !== null) // Não garante que seja apenas nullo. Pode ser um valor Fal
 Bom caso de uso  ✅​&#x20;
 
 ```typescript
-if (error != null) // Garante que é um valor de tipo primitivo.
-
+if (error != null) // Garante que é um valor de tipo primitivo (ou seja, null ou undefined mas não falsy).
 ```
+
+## 📑 Formatação
+
+{% hint style="info" %}
+O Compilador do _<mark style="color:blue;background-color:blue;">**TypeScript**</mark>_ já fornece um bom serviço de formatação estrutural, o que já é bom o suficiente para diminuir o esforço mental do desenvolvedor (ou do time). Todavia, você também pode usar o <mark style="color:blue;background-color:blue;">**tsfmt**</mark> no terminal (linha de comando para formatar seu código) - e também está disponível como plugin para várias **IDES (vscode, etc).**&#x20;
+{% endhint %}
+
+👉 Só um exemplo que eu acho pertinente, ou melhor, uma boa prática:
+
+```typescript
+let fora: string = 'Bolsonaro';
+```
+
+{% hint style="success" %}
+No caso, usamos um espaço depois da definição do tipo...&#x20;
+
+* <mark style="color:blue;">let</mark> variavel:<mark style="color:green;">(espaço)</mark>tipo<mark style="color:green;">(espaço)</mark>=<mark style="color:green;">(espaço)</mark>valor<mark style="color:blue;">(ponto e virgula)</mark>
+{% endhint %}
+
+## 💬 Sobre Aspas...
+
+{% hint style="success" %}
+Prefira usar aspas simples (single quotes) ao invés de aspas duplas.
+
+* Times grandes que usam JS/TS o fazem. É uma convenção quasae que de mercado, também é o sugerido pelo time do "Prettier".
+{% endhint %}
+
+```typescript
+let foraQuem: string = 'Jair Messias Bolsonaro';
+```
+
+Todavia, muita vezes em inglês precisamos usar o a single quote para conjugar um verbo: <mark style="color:green;">"I'm"</mark>
+
+{% hint style="danger" %}
+Se a aspas simples não lhe cabe. Use então "\`"&#x20;
+
+* Faça o uso do <mark style="color:green;">string template</mark> do <mark style="color:yellow;">JS</mark> ao invés de concatenar variáveis strings através var + "..."  + var2.
+{% endhint %}
+
+```typescript
+let foraQuem: string = 'Bolsonaro';
+console.log(`Fora ${foraQuem}`)
+```
+
+{% hint style="warning" %}
+Sobre outras coisas como usar "tabs" ou espaço. O sugerido para JS é 2 espaços (e muitas companias como Facebook, Airbnb, google seguem esse padrão. Mas o time do TS usa 4 e o do VScode também 😅. Isso é variável e de gosto muito mais pessoal ou convenção própria e do teu time 🥰
+{% endhint %}
+
+_(Mas eu uso tabs configuradas como 4 espaços)_ 🤗
+
