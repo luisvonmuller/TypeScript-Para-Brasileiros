@@ -13,8 +13,8 @@
 * <mark style="background-color:purple;">📭 null</mark> vs  <mark style="background-color:purple;">😱 undefined</mark>
 * 📑 Formatação
 * 🤔 Aspas simples vs Aspas Duplas
-* 👯‍♀️ Anotação de Tipos para Array
 * ⚙️ Uso de ponto e vírgula ao final de linhas **" ; "**
+* 👯‍♀️ Anotação de Tipos para Array
 * 📂 Uma sugestão para uma boa nomeação de Arquivos
 * 🤨 Tipo vs Interface
 * ⚠️ Comparadores, "==" vs "==="
@@ -326,4 +326,3 @@ Sobre outras coisas como usar "tabs" ou espaço. O sugerido para JS é 2 espaço
 {% endhint %}
 
 _(Mas eu uso tabs configuradas como 4 espaços)_ 🤗
-
