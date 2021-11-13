@@ -4,20 +4,20 @@
 
 ## 👉 Navegação por tópico facilitada!
 
-* ⭐️ Variáveis & Funções
-* 📦 Classes
-* 🔌 Interfaces
-* 🌟 Tipos
-* 😳 Namespaces
-* 🔢 Enum
-* <mark style="background-color:purple;">📭 null</mark> vs  <mark style="background-color:purple;">😱 undefined</mark>
-* 📑 Formatação
-* 🤔 Aspas simples vs Aspas Duplas
-* ⚙️ Uso de ponto e vírgula ao final de linhas **" ; "**
-* 👯‍♀️ Anotação de Tipos para Array
-* 📂 Uma sugestão para uma boa nomeação de Arquivos
-* 🤨 Tipo vs Interface
-* ⚠️ Comparadores, "==" vs "==="
+* [⭐️ Variáveis & Funções](./#variaveis-e-funcoes)
+* [📦 Classes](./#class)
+* [🔌 Interfaces](./#interfaces)
+* [🌟 Tipos](./#tipos)
+* [😳 Namespaces](./#namespaces)
+* [🔢 Enum](./#enum)
+* <mark style="background-color:purple;"></mark>[<mark style="background-color:purple;">📭 null</mark> vs  <mark style="background-color:purple;">😱 undefined</mark>](./#null-vs-undefined)<mark style="background-color:purple;"></mark>
+* [📑 Formatação](./#formatacao)
+* [🤔 Aspas simples vs Aspas Duplas](./#sobre-aspas...)
+* [⚙️ Uso de ponto e vírgula ao final de linhas **" ; "**](./#ponto-and-virgula)****
+* [📂 Uma sugestão para uma boa nomeação de Arquivos](./#sugestao-para-boa-nomeacao-de-arquivos.)
+* [🤨 Tipo vs Interface](./#tipo-ou-interface)
+* [👯‍♀️ Anotação de Tipos para Array](./#anotacao-do-tipo-array)
+* [⚠️ Comparadores, "==" vs "==="](./#comparadores-e)
 
 ## ⭐️​ Variáveis e Funções:
 
@@ -330,9 +330,80 @@ _(Mas eu uso tabs configuradas como 4 espaços)_ 🤗
 ## ⚙️​ Ponto & Vírgula;
 
 {% hint style="success" %}
-Use ponto e vírgulas, por quê?&#x20;
+Use o ponto e vírgula, por quê?&#x20;
 
 * Pontos e vírgulas explícitos ajudam os identadores (tsfmt/prettier) a identificar e "estruturar" seu código.&#x20;
 * A falta de ponto e vírgula pode ser incômodo para novos desenvolvedores em TS. Já que a maioria das linguagens o implementa. (Houve um debate sobre como isso pode ser "incomodo" para novos desenvolvedores e outros. [https://github.com/tc39/ecma262/pull/1062](https://github.com/tc39/ecma262/pull/1062))
 * Empresas grandes usam em suas implementações, ex: Google/Angular - Facebook/React - Microsoft/VScode...
 {% endhint %}
+
+## 🗂 Sugestão para boa nomeação de arquivos.
+
+Essa aqui é uma baita de uma discussão, depende muito do que ambiente você está e se você está seguindo o padrão de nomeação de um framework, ex: React para Componentes. Mas no geral o que a maioria dos times usa é o seguinte:&#x20;
+
+{% hint style="success" %}
+Use _**camelCase para nomear seus arquivos, exemplo:**_
+
+* utils.ts
+* helpersDaora.ts
+* mapeamentoEndPointsDaApi.ts
+{% endhint %}
+
+## 🤨​ Tipo ou Interface?
+
+Tipos devem ser usados para definir, adivinha? Tipos. Ou seja, se você tem uma função, ela retorna um valor. E esse valor possui um tipo. Mas essa função, também recebe algo. E esse algo, também são valores, ou seja, também podem ser tipos. Mas a "meta" ideia é que interface forneça uma interface 😅.  Eu acho que esse exemplo clarifica...
+
+{% hint style="success" %}
+Quando usar qual?
+
+* Tipos: Precisa de União ou Interseção de tipos (e provavelmente você vai preferir Tipos também se quiser implementar alguns tipos de mapeamentos Genéricos de objetos).
+* Interfaces: quando você precisa dizer que algo "implements" ou "extends", como por exemplo uma classe, para receber argumentos em uma função, ou até mesmo para quando você tá querendo criar alguma função extremamente composta bem maneira 👏.&#x20;
+
+😅 Ou do jeito que você se sentir mais confortável e seguro para a implementação que está fazendo! 👀
+{% endhint %}
+
+Aqui em baixo, eu poderia definir a função de outra maneira, optei por essa.
+
+```typescript
+/** Definimos a interface (ou contrato) de uso da função */
+interface DizerOi {
+    nome: string;
+    sobrenome?: string;
+}
+
+/**  Definimos que o tipo de retorno da função como uma Array de Strings */
+type DisseOi = string[];
+
+/** Vamos dizer oi 10x! e retornar um array! */
+const dizerOi = ({nome, sobrenome}: DizerOi): DisseOi => {
+    return [...Array(10).keys()].map((key) => {
+        return `Olá ${nome} ${sobrenome ?? ''}`;
+    })
+} 
+
+console.log(dizerOi({nome: 'Luís'}));
+```
+
+## 👯‍♀️ Anotação do tipo Array 👯‍♂️
+
+{% hint style="success" %}
+Use <mark style="color:blue;">tipo\[]</mark> ao invés de <mark style="color:red;">Array\<tipo></mark>
+{% endhint %}
+
+Mal caso de uso 🚫
+
+```typescript
+let variosNumeros: Array<number> = [1,2,3,4,5,6,7];
+```
+
+#### Bom caso de uso  ✅​&#x20;
+
+```typescript
+let variosNumeros: number[] = [1,2,3,4,5,6,7];
+```
+
+## ⚠️​ Comparadores "===" e "=="
+
+#### 😴​  Relaxa amigo! Você tá usando TypeScript. Pode usar "===" tranquilamente!
+
+### 🥰 Obrigado por ler até aqui!
