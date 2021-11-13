@@ -1,9 +1,3 @@
----
-description: >-
-  Um guia de estilos não oficial para você usar no seus projetos de TypeScript
-  por @luisvonmuller.
----
-
 # 🇧🇷 Guia de Estilos para TypeScript
 
 Após mais de um ano de desenvolvimento em TypeScript e usar vários "Guias de estilo" em inglês providos por terceiros, decidi juntar as "melhores práticas" que eu encontrei. Boa parte do conteúdo vem de: [https://basarat.gitbook.io/typescript/styleguide](https://basarat.gitbook.io/typescript/styleguide) - por eu concordar em sua maioria com ele e em sua maior parte é só uma tradução feita das boas e más práticas. 🥰
