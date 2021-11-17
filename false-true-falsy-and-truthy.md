@@ -87,7 +87,26 @@ valoresInexatos.forEach((valor) => console.log(valor ? "Verídico" : "Errôneo/F
 * {} - (Um **objeto** sem nenhuma propriedade.)
 * ()=>{} - (Uma definição de função anônima ou não.
 
+### Segue a  prova do supracitado (☞ﾟヮﾟ)☞&#x20;
 
+```typescript
+const cadeiaDeCaracteresComZero: string = '0';
+const cadeiaDeCarcteresComAPalavraFalse: string = 'false';
+const vetorVazio: number[] = [];
+const funcaoNomeada: Function = () => {
+    //vazia
+}
+
+let valoresVeridicos: unknown[] = [
+    cadeiaDeCaracteresComZero,
+    cadeiaDeCarcteresComAPalavraFalse,
+    vetorVazio,
+    funcaoNomeada,
+    () => {}
+]
+
+valoresVeridicos.forEach((valor) => console.log(valor ? "Verídico" : "Errôneo/Falseado"));
+```
 
 ****
 
