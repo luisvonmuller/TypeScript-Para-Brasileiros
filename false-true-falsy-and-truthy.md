@@ -38,7 +38,7 @@ if(constanteFalsa && constanteVerdadeira ) {
 
 Na [lógica](https://pt.wikipedia.org/wiki/L%C3%B3gica), afirmações **diferentes** são **logicamente equivalentes** se tiverem o mesmo conteúdo lógico. Isto é, se elas tiverem o mesmo [valor de verdade](https://pt.wikipedia.org/wiki/Valor\_de\_verdade) em todos os modelos. Também conhecido por "Tautologia", isto é, algo que é correspondente em termos lógicos.
 
-## :thumbsdown: O que é o "<mark style="color:yellow;">Falsy</mark>" ou _Inexato_ ?&#x20;
+## :thumbsdown: O que é o "<mark style="color:yellow;">Falsy</mark>" ou _Errôneo/_Falseáveis ?&#x20;
 
 <mark style="color:yellow;">****</mark>:arrow\_right: <mark style="color:yellow;">**Falsy**</mark> é um **"**_**pseudo tipo**_**"  **logicamente equivalente ao **Valor Primitivo  **<mark style="color:red;background-color:red;">**false**</mark> para o <mark style="background-color:orange;">**JavaSript.**</mark>
 
@@ -48,9 +48,32 @@ Na [lógica](https://pt.wikipedia.org/wiki/L%C3%B3gica), afirmações **diferent
 * **0n** - (Um inteiro de GIGANTE cujo valor numérico é zero - um _**bigInt**_).
 * **null** - (O tipo primitivo **Nulo**).
 * **undefined** - (Algo que não possui valor atribuído, isto é, **indefinido**).
-* **false**
 * **NaN** (_**Not-a-Number**_** -** algo que não é um número **pertencente** ao conjuntos dos reais)
 * **"" ou '' ** (Uma cadeia de **caracteres vazia**)
+
+### Segue a  prova do supracitado (☞ﾟヮﾟ)☞&#x20;
+
+```typescript
+const inteiroDeValorNumericoZero: number = 0;
+const floatDeValorNumericoZero: number = 0.0;
+const inteiroGrandeComValorNumericoZero: bigint = BigInt(0);
+const nulo: null = null;
+let indefinido;
+const naoNumero: number = Number.NaN; //Sim, o tipo de NaN é "numero" ¯\_(ツ)_/¯
+const cadeiaDeCaracteresVazia = '';
+
+let valoresInexatos: unknown[] = [
+    inteiroDeValorNumericoZero,
+    floatDeValorNumericoZero,
+    inteiroGrandeComValorNumericoZero,
+    nulo,
+    indefinido,
+    naoNumero,
+    cadeiaDeCaracteresVazia
+]
+
+valoresInexatos.forEach((valor) => console.log(valor ? "Verídico" : "Errôneo/Falseáveis"));
+```
 
 ## &#x20;O que é "<mark style="color:green;">Truthy</mark>" ou Verídico?&#x20;
 
