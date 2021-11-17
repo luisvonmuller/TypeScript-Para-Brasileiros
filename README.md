@@ -28,14 +28,14 @@ Use _**camelCase**_ para nomear variáveis e funções
 #### &#x20;Má nomenclatura 🚫
 
 ```typescript
-let FulanoVariavel: string = '#ForaBolsonaro';
+let FulanoVariavel: string = 'Aqui está errado.. ( ఠ ͟ʖ ఠ )';
 function CiclanoFuncao(){}
 ```
 
 #### Boa nomenclatura ✅​&#x20;
 
 ```typescript
-let fulanoVariavel: string = '#ForaBolsonaro';
+let fulanoVariavel: string = 'Aqui está daora! (✿◠‿◠)';
 function ciclanoFuncao(){}
 ```
 
@@ -167,7 +167,7 @@ enum jogodoBicho {
     borboleta,
     cachorro
 }
-
+// Não há endosso do Jogo do Bicho. Apenas é algo contextual que todo Brasileiro entenderia.
 ```
 
 #### Boa nomenclatura ✅​&#x20;
@@ -178,6 +178,7 @@ enum JogoDoBicho {
     Borboleta,
     Cachorro
 }
+// Não há endosso do Jogo do Bicho. Apenas é algo contextual que todo Brasileiro entenderia.
 ```
 
 ## 😅 <mark style="color:blue;">Null</mark> vs <mark style="color:green;">Undefined</mark> 👀
@@ -287,7 +288,7 @@ O Compilador do _<mark style="color:blue;background-color:blue;">**TypeScript**<
 👉 Só um exemplo que eu acho pertinente, ou melhor, uma boa prática:
 
 ```typescript
-let fora: string = 'Bolsonaro';
+let fulano: string = 'Ciclano';
 ```
 
 {% hint style="success" %}
@@ -305,7 +306,7 @@ Prefira usar aspas simples (single quotes) ao invés de aspas duplas.
 {% endhint %}
 
 ```typescript
-let foraQuem: string = 'Jair Messias Bolsonaro';
+let nomeDoSujeito: string = 'Luís Von Müller';
 ```
 
 Todavia, muita vezes em inglês precisamos usar o a single quote para conjugar um verbo: <mark style="color:green;">"I'm"</mark>
@@ -317,8 +318,8 @@ Se a aspas simples não lhe cabe. Use então "\`"&#x20;
 {% endhint %}
 
 ```typescript
-let foraQuem: string = 'Bolsonaro';
-console.log(`Fora ${foraQuem}`)
+let nomeDoSujeito: string = 'Luís Von Müller';
+console.log(`Quem escreveu? ${nomeDoSujeito}`)
 ```
 
 {% hint style="warning" %}
